@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "simpleluckyblock",
+	"version": "${version}",
+	"name": "SimpleLuckyBlock",
+	"description": "A simple lucky block mod.",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://github.com/FireStreaker2/SimpleLuckyBlock",
+		"sources": "https://github.com/FireStreaker2/SimpleLuckyBlock"
+	},
+	"license": "MIT",
+	"icon": "assets/simpleluckyblock/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"firestreaker2.simple.lucky.block.SimpleLuckyBlock"
+		],
+		"client": [
+			"com.example.ExampleModClient"
+		]
+	},
+	"mixins": [
+		"simpleluckyblock.mixins.json",
+		{
+			"config": "modid.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
