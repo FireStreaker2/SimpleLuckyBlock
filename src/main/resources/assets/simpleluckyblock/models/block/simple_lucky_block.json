@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "simpleluckyblock:block/simple_lucky_block"
+  }
+}
