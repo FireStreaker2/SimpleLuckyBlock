@@ -17,18 +17,13 @@ public class SimpleLuckyBlock implements ModInitializer {
   // It is considered best practice to use your mod id as the logger's name.
   // That way, it's clear which mod wrote info, warnings, and errors.
 
-  // public static final Item SIMPLE_LUCKY_BLOCK_ITEM = new Item(new Item.Settings());
-  public static final Block SIMPLE_LUCKY_BLOCK = new Block(FabricBlockSettings.create().strength(4.0f, 1200.0f).sounds(BlockSoundGroup.STONE));
-
-
+  public static final Block SIMPLE_LUCKY_BLOCK = new LuckyBlock(FabricBlockSettings.create().strength(0.2f, 1200.0f).sounds(BlockSoundGroup.STONE));
 
   @Override
   public void onInitialize() {
     // This code runs as soon as Minecraft is in a mod-load-ready state.
     // However, some things (like resources) may still be uninitialized.
     // Proceed with mild caution.
-
-    // Registry.register(Registries.ITEM, new Identifier("simpleluckyblock", "simple_lucky_block"), SIMPLE_LUCKY_BLOCK_ITEM);
     Registry.register(Registries.BLOCK, new Identifier("simpleluckyblock", "simple_lucky_block"), SIMPLE_LUCKY_BLOCK);
     Registry.register(Registries.ITEM, new Identifier("simpleluckyblock", "simple_lucky_block"), new BlockItem(SIMPLE_LUCKY_BLOCK, new Item.Settings()));
 
